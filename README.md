@@ -1,16 +1,14 @@
 # game-and-watch-retro-go-save-state-backup
-Save state backup from game-and-watch-retro-go
+
 
 This repository only contains a description of the "game-and-watch-retro-go save state" process, as already explained by kbeckmann.
+Aim: describe the "Save state" backup from a Nintendo® Game & Watch™, flashed with "game-and-watch-retro-go"
 
 ## Sources
 * Retro-go source : https://github.com/kbeckmann/game-and-watch-retro-go
-* Discord source : https://discord.com/channels/781528730304249886/784362150793707530/795914729142091784
-** Date: 2021/01/05 08:20AM
-** Author: kbeckmann
+* Discord source : https://discord.com/channels/781528730304249886/784362150793707530/795914729142091784 (Date: 2021/01/05 08:20AM, Author: kbeckmann)
 
 ## Dump of Discord
-
 ```
 I have now added scripts to backup and restore save states.
 the idea is that it should work to backup save states from the currently running device, given that you have the corresponding elf file. 
