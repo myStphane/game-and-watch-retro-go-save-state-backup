@@ -3,6 +3,7 @@
 This repository only contains a description of the "game-and-watch-retro-go save state" process, as already explained by kbeckmann.
 
 Aim: describe the roms "Save state" process from a Nintendo® Game & Watch™ (G&W) flashed with "game-and-watch-retro-go" (ie, the rom "save" option within the G&W, that can be backuped locally on your computer & restored at any time, on the G&W, even after a re-flash with other roms).
+
 Why?: I'm always afraid of loosing my "data"; this "save state" process allows me to backup the rom "save" state at any time (from the G&W <-> locally onto my computer), to be restored later, whatever I do with my G&W (or even, transfert the rom "save state" to another G&W).
 
 ## Sources
