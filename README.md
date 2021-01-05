@@ -10,10 +10,11 @@ Aim: describe the roms "Save state" process from a Nintendo® Game & Watch™ (G
 
 ## yEd "game-and-watch-retro-go" & "save state" diagram
 
-Here a yEd diagram describing all the Fash to backup & restore "save states"
+Here a *yEd diagram* describing all the *fash roms* to *backup & restore "save states"* for the G&W.
 
 => available there: https://www.yworks.com/yed-live/?file=https://gist.githubusercontent.com/myStphane/602be41298a69f175c462e239bf84b97/raw/6d6a944f7a144a693ef67e5fae7eb6315214080d/Game%20%26%20Watch%20retro-go(2)
 
+Find in the next paragraphs full description...
 
 ## yEd scheme & step-by-step process description
 
@@ -67,7 +68,7 @@ WARNING: you MUST have the previously used `build/gw_retro_go.elf` (from step 5.
 * Status: once done, you may have, on the G&W, the restored save states for B and C roms.
 
 
-
+----
 
 ## Complete dump of Discord from kbeckmann
 ```
