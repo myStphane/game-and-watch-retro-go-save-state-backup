@@ -12,11 +12,16 @@ Why?: I'm always afraid of loosing my "data"; this "save state" process allows m
 
 ## yEd "game-and-watch-retro-go" & "save state" diagram
 
-Here a *yEd diagram* describing all the *fash roms* to *backup & restore "save states"* for the G&W.
+1. Check the 2 yEd screenshots files (Steps 1-5):
 
-=> available there: https://www.yworks.com/yed-live/?file=https://gist.githubusercontent.com/myStphane/602be41298a69f175c462e239bf84b97/raw/6d6a944f7a144a693ef67e5fae7eb6315214080d/Game%20%26%20Watch%20retro-go(2)
+* Game & Watch retro-go(2)-Step1-3.jpg
+* Game & Watch retro-go(2)-Step4-5.jpg
 
-Find in the next paragraphs full description...
+2. Or, find the *yEd diagram* describing all the *fash roms* to *backup & restore "save states"* for the G&W there: https://www.yworks.com/yed-live/?file=https://gist.githubusercontent.com/myStphane/602be41298a69f175c462e239bf84b97/raw/6d6a944f7a144a693ef67e5fae7eb6315214080d/Game%20%26%20Watch%20retro-go(2)
+
+
+and find in the next paragraphs full step-by-step process description...
+
 
 ## yEd scheme & step-by-step process description
 
