@@ -1,14 +1,75 @@
 # game-and-watch-retro-go-save-state-backup
 
-
 This repository only contains a description of the "game-and-watch-retro-go save state" process, as already explained by kbeckmann.
-Aim: describe the "Save state" backup from a Nintendo® Game & Watch™, flashed with "game-and-watch-retro-go"
+
+Aim: describe the roms "Save state" process from a Nintendo® Game & Watch™ (G&W) flashed with "game-and-watch-retro-go"
 
 ## Sources
-* Retro-go source : https://github.com/kbeckmann/game-and-watch-retro-go
-* Discord source : https://discord.com/channels/781528730304249886/784362150793707530/795914729142091784 (Date: 2021/01/05 08:20AM, Author: kbeckmann)
+* game-and-watch-retro-go source: https://github.com/kbeckmann/game-and-watch-retro-go
+* Discord source: https://discord.com/channels/781528730304249886/784362150793707530/795914729142091784 (Date: 2021/01/05 08:20AM, Author: kbeckmann)
 
-## Dump of Discord
+## yEd "game-and-watch-retro-go" & "save state" diagram
+
+Here a yEd diagram describing all the Fash to backup & restore "save states"
+
+=> available there: https://www.yworks.com/yed-live/?file=https://gist.githubusercontent.com/myStphane/602be41298a69f175c462e239bf84b97/raw/6d6a944f7a144a693ef67e5fae7eb6315214080d/Game%20%26%20Watch%20retro-go(2)
+
+
+## yEd scheme & step-by-step process description
+
+Please refers to the above source repository for details on game-and-watch-retro-go usage.
+Please refers to the above yEd diagram.
+
+### 1. Flash 3 roms ("A, B, C") to G&W / game-and-watch-retro-go
+* Aim: flash roms on the G&W
+* Context: have 3 roms -lets named it: "A", "B", "C"- ready to flash
+* Action: using common game-and-watch-retro-go command `./make [...]` to flash roms on the Game & Watch
+* Status: once done, you may have those 3 roms (A, B, C) running & playable on the Game & Watch
+
+WARNING: keep the `build/gw_retro_go.elf` file for further usage (-> step 3.)
+
+NOTE: At this time, no "save state" (ie, the rom game backup) is available on the Game & Watch
+
+
+### 2. Play roms on game-and-watch-retro-go & perform "save states"
+* Aim: play roms & perform "save state" on the G&W
+* Context: having 3 roms, named A, B, C on the G&W
+* Action: plays with all roms and perform, on the G&W, a "Save state" for each of A, B, C roms, using the in-game "PAUSE/SET" "Save & Continue" or "Save & Quite" options
+* Status: once done, you may have, for each rom, a "save state", on the Game & Watch
+
+
+### 3. Backup (extract) the "save states" from G&W locally on your computer
+* Aim: backup locally on your computer each "save state" from the G&W
+* Context: having 3 roms, named A, B, C on the G&W, each having a "save state"
+
+WARNING: you MUST have the previously used `build/gw_retro_go.elf` (from step 1.)
+
+* Action: execute `./dump_saves.sh build/gw_retro_go.elf` to save locally on your computer, each rom "save state"
+* Status: once done, you may have, locally for each rom, a "save state" backup in directory "./save_states/", sub-folders: `./save_states/<emu>/<rom name>.save` (located, for our example, in 3 folders: `./save_states/<emu>/A.save & ./save_states/<emu>/B.save & ./save_states/<emu>/C.save`)
+
+### 4. Flash 3 (new) roms ("B, C, D") to G&W / game-and-watch-retro-go
+* Aim: flash new roms on the G&W
+* Context: have 3 (new) roms -lets named it: "B", "C" & "D"- and one removed rom -the "A" one- ready to flash
+* Action: using common game-and-watch-retro-go command `./make [...]` to flash roms on the Game & Watch
+* Status: once done, you may have those 3 (new) roms (B, C, D, but no more A) running & playable on the Game & Watch
+
+WARNING: keep the *new* `build/gw_retro_go.elf` file for further usage (-> step 5.)
+
+NOTE: At this time, no "save state" (ie, the rom game backup) is available on the Game & Watch (or, maybe if you're luck a possible "trace" for B & C, but could be crappy)
+
+### 5. Restore the "save states" to the G&W
+* Aim: restore the save state for matching roms on the G&W
+* Context: having your "save states" for some roms (A, B, C) on your computer, restore it to roms B & C (and not for A & D, as A is no more on the G&W and D has no save state bacuped on the computer)
+
+WARNING: you MUST have the previously used `build/gw_retro_go.elf` (from step 5.)
+
+* Action: execute `./program_saves.sh build/gw_retro_go.elf` command, on the new .elf (-> from step 4.) to write the local backuped "save state" to the matching roms, on the G&W
+* Status: once done, you may have, on the G&W, the restored save states for B and C roms.
+
+
+
+
+## Complete dump of Discord from kbeckmann
 ```
 I have now added scripts to backup and restore save states.
 the idea is that it should work to backup save states from the currently running device, given that you have the corresponding elf file. 
